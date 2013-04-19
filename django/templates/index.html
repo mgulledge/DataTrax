@@ -1,0 +1,123 @@
+<html>
+
+<head>
+
+	<title> DataLeader | Dashboard | Springfield News-Leader </title>
+ 	<link rel="stylesheet" href="http://localhost/django/css/style.css" type="text/css" media="all">
+	
+
+	<!-- prefix free to deal with vendor prefixes -->
+	<script src="http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js" type="text/javascript"></script>
+	<script src="http://code.jquery.com/jquery.min.js" type="text/javascript"></script>
+	<script src="http://localhost/django/menu.js" type="text/javascript"></script>
+	<link href='http://fonts.googleapis.com/css?family=Tinos:400,700|Pontano+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+	
+	<div id="container"> 
+
+		<div id="sidebar">
+			<img src="http://localhost/django/images/logo.jpg" width='200px'>
+			
+				<div id="accordian">
+					<ul>
+						<li>
+							<h3></span>Dashboard</h3>
+							<ul>
+								<li><a href="#">Login</a></li>
+								<li><a href="#">Help</a></li>
+							</ul>
+						</li>
+						<!-- we will keep this LI open by default -->
+						<li class="active">
+							<h3>Inmates</h3>
+							<ul>
+								<li><a href="#">Today's inmates</a></li>
+								<li><a href="#">Active population</a></li>
+								<li><a href="#">Complete list</a></li>
+								<li><a href="#">Search</a></li>
+							</ul>
+						</li>
+						<li>
+							<h3>Sunshine Requests</h3>
+							<ul>
+								<li><a href="#">Active requests</a></li>
+								<li><a href="#">Filled requests</a></li>
+								<li><a href="#">Contacts</a></li>
+							</ul>
+						</li>
+						<li>
+							<h3><a href="http://www.news-leader.com">News-Leader</a></h3>
+						</li>
+					</ul>
+				</div>
+				<br>
+				<span class="copyright">Copyright 2013 Michael R. Gulledge or respective owner</span>
+
+		</div> <!-- END SIDEBAR -->
+		
+		<div id="main">
+
+			<div id="main-top">
+
+				<div id="main-header">
+					<span class="small">User Login</span>
+					<hr color:"#fff">
+				</div> <!-- END MAIN HED -->
+
+				<h1> Welcome to DataTrax</h1>
+
+				<p> This is the main DataTrax Dashboard, showing key information at a glance. For more information, use the left sidebar menu to navigate to other parts of the site. Information is pulled from the Greene County jail twice an hour. 
+
+			</div> <!--END MAIN TOP -->
+
+			<div id="main-content">
+
+				<div id="main-module-left">
+
+					<h2> Most recent inmates</h2><br>
+					<p> These are the most recent inmates booked into the Greene County jail:
+
+						{% for inmate in inmates %}
+		
+						<li>{{inmate.firstname}} {{inmate.lastname}} - <span class="offense">{{inmate.offense}}</span></li>
+						{% endfor %}
+
+					</p>
+					<span class="small">Click names for more information. If no offense listed, the data was not avaliable from law enforcement.</span>
+				</div> <!-- END MODULE -->
+
+				<div id="main-module-right">
+
+					<h2> Jail statistics</h2><br>
+
+					<p> Active inmates: {{active_inmate_count}} </p>
+					<p> New inmates today: {{today_inmate_count}} </p>
+
+					<p> Inmates booked and released today: {{today_inmate_released}} </p>
+
+					<p> Active male inmates: {{male_inmate_count}} </p>
+
+					<p> Active female inmates: {{female_inmate_count}} </p>
+
+					<p> Total inmates in system: {{total_count}} </p>
+
+				</div> <!-- END MODULE -->
+
+			</div> <!-- END MAIN CONTENT -->
+
+		</div> <!-- END MAIN -->
+
+	</div> <!-- END CONTAINER-->
+
+</body>
+
+</html>
+
+
+

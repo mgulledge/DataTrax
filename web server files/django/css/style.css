@@ -1,0 +1,353 @@
+		body{
+			background-color: #FFFFFF;
+			/*font-family: 'Tinos', serif;*/
+			font-family: 'Cabin', sans-serif;
+
+		}
+
+		.clear { /* Also commonly known as clearfix */
+		clear: both; /* At the very least, you must have this. All extra declarations are for fine-tuning */
+		height: 0;
+		font-size: 0;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		width: 0;
+		line-height: 0;
+		}
+
+		#container {
+		margin: 0 auto; /* This will center a fixed-width container */
+		width: 1000px;
+		}
+
+		#sidebar {
+			margin: 0 auto;
+			width: 200px;
+			float: left;
+		}
+
+		#main {
+			float: right;
+			width: 790px;
+		}
+
+		#main-header {
+			float: right;
+			width: 790px;
+			height: 35px;
+			background-color: white;
+			margin: 2px auto 0 auto;
+			text-align: right;
+		}
+
+		#main-top {
+			float: right;
+			width: 790px;
+			height: 200px;
+		}
+
+		#main-content {
+			float: right;
+			width: 790px;
+			margin-top: 10px;
+		}
+
+		#main-module-right {
+			float: right;
+			width: 365px;
+			height: 250px;
+			margin-top: 0px;
+			border-style:dashed;
+			border-color:#D3D3D3;
+			padding: 10px;
+
+		}
+
+		#main-module-left {
+			float: left;
+			width: 365px;
+			margin-top: 0px;
+			border-style:dashed;
+			border-color:#D3D3D3;
+			padding: 10px;
+		}
+
+
+/*
+		div.main-left {
+		float: left;
+		width: 500px;
+		}
+
+		div.main-right {
+		float: right; /* You can also set this to float: right; 
+		width: 190px;
+		}
+
+		div.item-1 {
+		float: left;
+		width: 370px;
+		margin-top: 19px;
+
+		}
+
+		div.item-1b {
+		float: left;
+		width: 220px;
+		margin-top: 19px;
+
+		}
+		div.item-2 {
+		float: right; /* You can also set this to float: right; 
+		width: 340px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		background-color: #c9d5c1;
+		padding: 15px;
+		font-size: 14;
+		margin-top: 19px;
+		}
+		div.item-2b {
+		float: right; /* You can also set this to float: right; 
+		width: 550px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		background-color: #c9d5c1;
+		padding: 15px;
+		font-size: 14;
+		margin-top: 19px;
+		}
+
+		div.head-out {
+			display:table;
+			position:static;
+		}
+
+		div.head-logo {
+			display:table-cell;
+			vertical-align: middle;
+			width: 100%;
+			width:350px;
+			height:100px;
+		}
+
+		div.head-item {
+			display:table-cell;
+			vertical-align: middle;
+			width: 100%;
+			width:75px;
+			height:100px;
+			font-family: 'Cabin', Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			font-color: #000000;
+			text-align: center;
+		}
+
+		div.header {
+			float: left;
+			width: 800px;
+			height: 100px;
+			   display: table-cell;
+   			vertical-align: bottom;
+
+		}
+
+		div.header-bar {
+			float: right;
+			text-align: right;
+			width: 800px;
+			font-family: 'Cabin', Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			line-height: 14px;
+			color: #000000;
+			vertical-align:middle;
+
+			a:link {color: #000000; text-decoration: underline; },
+			a:active {color: #000000; text-decoration: underline; },
+			a:visited {color: #000000; text-decoration: underline; },
+		}
+
+		div.header-options {
+			float: right;
+			font-family: 'Cabin', Helvetica, Arial, sans-serif;
+			font-size: 10px;						   
+			display: table-cell;
+			color: #000000;
+			vertical-align:50%;
+		}
+
+		
+
+		div.header-right {
+			float: right;
+			text-align: right;
+			width: 150px;
+			height: 50px;
+		}
+
+		*/
+
+		/*custom font for text*/
+		@import url(http://fonts.googleapis.com/css?family=Nunito);
+		/*CSS file for fontawesome - an iconfont we will be using. This CSS file imported contains the font-face declaration. More info: http://fortawesome.github.io/Font-Awesome/ */
+		@import url(http://thecodeplayer.com/uploads/fonts/fontawesome/css/font-awesome.min.css);
+
+		/*Basic reset*/
+		* {margin: 0; padding: 0;}
+
+	
+		#accordian {
+			background: #004050;
+			width: 200px;
+			margin: 10px auto 0 auto;
+			color: white;
+			/*Some cool shadow and glow effect*/
+			box-shadow: 
+				0 5px 15px 1px rgba(0, 0, 0, 0.6), 
+				0 0 200px 1px rgba(255, 255, 255, 0.5);
+		}
+		/*heading styles*/
+		#accordian h3 {
+			font-family: 'Arvo', Georgia, Times, serif;
+			font-size: 12px;
+			line-height: 34px;
+			padding: 0 10px;
+			cursor: pointer;
+			/*fallback for browsers not supporting gradients*/
+			background: #003040; 
+			background: linear-gradient(#003040, #002535);
+		}
+		/*heading hover effect*/
+		#accordian h3:hover {
+			text-shadow: 0 0 1px rgba(255, 255, 255, 0.7);
+		}
+		/*iconfont styles*/
+		#accordian h3 span {
+			font-size: 16px;
+			margin-right: 10px;
+		}
+		/*list items*/
+		#accordian li {
+			list-style-type: none;
+		}
+		/*links*/
+		#accordian ul ul li a {
+			color: white;
+			text-decoration: none;
+			font-size: 11px;
+			line-height: 27px;
+			display: block;
+			padding: 0 15px;
+			/*transition for smooth hover animation*/
+			transition: all 0.15s;
+		}
+		/*hover effect on links*/
+		#accordian ul ul li a:hover {
+			background: #003545;
+			border-left: 5px solid lightgreen;
+		}
+		/*Lets hide the non active LIs by default*/
+		#accordian ul ul {
+			display: none;
+		}
+		#accordian li.active ul {
+			display: block;
+		}
+
+		h1 {
+			font-family: Georgia, Times, serif;
+			font-size: 49px;
+			line-height: 55px;
+			color: black;
+			margin-bottom: 10px;
+			margin-top:50px;
+		}
+
+		h3 {
+			font-family: 'Arvo', Georgia, Times, serif;
+			font-size: 18px;
+			line-height: 24px;
+			color: white;
+			font-weight: normal;
+
+
+		}
+
+		h4 {
+			font-family: 'Cabin', Georgia, Times, serif;
+			font-size: 25px;
+			line-height: 25px;
+			color: #f8a300;
+		}
+
+		h2 {
+			font-family: 'Cabin', Georgia, Times, serif;
+			font-size: 25px;
+			line-height: 25px;
+			font-weight: normal;
+
+
+		}
+		 
+		p {
+			font-family: 'Cabin', Helvetica, Arial, sans-serif;
+			font-size: 15px;
+			line-height: 25px;
+			color: #464646;
+			margin-bottom: 10px;
+		}
+
+		li {
+			font-family: 'Cabin', Helvetica, Arial, sans-serif;
+			font-size: 15px;
+			line-height: 20px;
+			margin-bottom: 10px;
+		}
+
+		.copyright{
+			font-family: 'Cabin', Helvetica, Arial, sans-serif;
+			font-size: 10px;
+			line-height: 15px;
+			color: #464646;
+		}
+
+		.small{
+			font-family: 'Cabin', Helvetica, Arial, sans-serif;
+			font-size: 12px;
+			line-height: 15px;
+			color: #464646;
+		}
+
+		.offense{
+			font-family: 'Cabin', Helvetica, Arial, sans-serif;
+			font-size: 12px;
+			line-height: 15px;
+			color: #464646;
+			text-transform: uppercase; 
+		}
+
+		table {
+			padding: 0 30px 5px 5px;
+		}
+
+		tr:nth-child(even) {
+			background-color: #c9d5c1;
+			font-family: 'Cabin', Helvetica, Arial, sans-serif;
+			line-height: 20px;
+			font-size: 12px;
+			text-align: center;
+		}
+		 
+		tr:nth-child(odd) {
+			background-color: #FFF;
+			font-family: 'Cabin', Helvetica, Arial, sans-serif;
+			line-height: 20px;
+			font-size: 12px;
+			padding: 5px;
+			text-align: center;
+		}
+
+		a:link {color: #0c4577; text-decoration: none; }
+		a:active {color: #0c4577; text-decoration: none; }
+		a:visited {color: #0c4577; text-decoration: none; }

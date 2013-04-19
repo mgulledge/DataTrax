@@ -1,0 +1,17 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+	<head>
+		<!-- BEGIN title -->
+		<title>News-Leader.com | Data-Leader: Crime</title>
+		<!-- END title -->
+		
+	</head>
+	<body>
+		<h1> TEST </h1>
+		{% for inmate in inmates %}
+		
+		<li>{{inmate.lastname}}, {{inmate.firstname}}</li>
+		
+		{% endfor %}
+	</body>
+</html>

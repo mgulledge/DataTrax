@@ -1,0 +1,105 @@
+<html>
+
+<head>
+
+	<title> DataLeader </title>
+	<link rel="stylesheet" href="http://localhost/django/css/style.css" type="text/css" media="all">
+	
+
+	<!-- prefix free to deal with vendor prefixes -->
+	<script src="http://thecodeplayer.com/uploads/js/prefixfree-1.0.7.js" type="text/javascript"></script>
+	<script src="http://code.jquery.com/jquery.min.js" type="text/javascript"></script>
+	<script src="http://localhost/django/menu.js" type="text/javascript"></script>
+	<link href='http://fonts.googleapis.com/css?family=Tinos:400,700|Pontano+Sans' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+
+
+</head>
+
+<body>
+
+	<div id="container"> 
+
+		<div id="sidebar">
+			<img src="http://localhost/django/images/logo.jpg" width='200px'>
+			
+				<div id="accordian">
+					<ul>
+						<li>
+							<h3></span>Dashboard</h3>
+							<ul>
+								<li><a href="#">Login</a></li>
+								<li><a href="#">Help</a></li>
+							</ul>
+						</li>
+						<!-- we will keep this LI open by default -->
+						<li class="active">
+							<h3>Inmates</h3>
+							<ul>
+								<li><a href="#">Today's inmates</a></li>
+								<li><a href="#">Active population</a></li>
+								<li><a href="#">Complete list</a></li>
+								<li><a href="#">Search</a></li>
+							</ul>
+						</li>
+						<li>
+							<h3>Sunshine Requests</h3>
+							<ul>
+								<li><a href="#">Active requests</a></li>
+								<li><a href="#">Filled requests</a></li>
+								<li><a href="#">Contacts</a></li>
+							</ul>
+						</li>
+						<li>
+							<h3><a href="http://www.news-leader.com">News-Leader</a></h3>
+						</li>
+					</ul>
+				</div>
+				<br>
+				<span class="copyright">Copyright 2013 Michael R. Gulledge or respective owner</span>
+
+		</div> <!-- END SIDEBAR -->
+		
+		<div id="main">
+
+			<div id="main-top">
+
+				<div id="main-header">
+					<span class="small">User Login</span>
+					<hr color:"#fff">
+				</div> <!-- END MAIN HED -->
+
+				<h1> Complete inmate list</h1>
+
+				<p> A complete list of all inmates in the DataTrax system from the Greene County jail. <b>All inmates are presumed innocent until proven guilty.</b> </p>
+
+			</div> <!--END MAIN TOP -->
+
+			<div id="main-content">
+
+					<table>
+						<tr><th>Last Name</th><th>First Name</th><th>Active</th>
+							<th>Time Booked</th><th>Time Last Seen</th><th>Offense</th><th>Eye Color</th><th>Hair Color</th><th>Weight</th><th>Height</th><th>Cell Block</th></tr>
+
+						{% for inmate in inmates %}
+
+						<tr><td>{{inmate.lastname}}</td><td>{{inmate.firstname}}</td><td>Y</td><td>{{inmate.in_time}}</td><td>{{inmate.last_seen}}</td><td>{{inmate.offense}}</td><td>{{inmate.eye}}</td><td>{{inmate.hair}}</td><td>{{inmate.weight}}</td><td>{{inmate.height}}</td><td>{{inmate.pod}}</td></tr>
+
+						{% endfor %}
+						
+					</table>
+
+			</div> <!-- END MAIN CONTENT -->
+
+		</div> <!-- END MAIN -->
+
+	</div> <!-- END CONTAINER-->
+
+</body>
+
+</html>
+
+
+

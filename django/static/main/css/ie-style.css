@@ -1,0 +1,184 @@
+		body{
+			background-color: #FFFFFF;
+			/*font-family: 'Tinos', serif;*/
+			font-family: 'Cabin', sans-serif;
+
+		}
+
+		.clear { /* Also commonly known as clearfix */
+		clear: both; /* At the very least, you must have this. All extra declarations are for fine-tuning */
+		height: 0;
+		font-size: 0;
+		overflow: hidden;
+		margin: 0;
+		padding: 0;
+		width: 0;
+		line-height: 0;
+		}
+
+		div.twitter { background-image: url('/graphics/twitterlinka.png'); }
+		div.twitter:hover { background-image: url('/graphics/twitterlinkb.png'); }
+
+		div.container {
+		margin: 0 auto; /* This will center a fixed-width container */
+		width: 800px;
+		}
+
+		div.main-left {
+		float: left;
+		width: 500px;
+		}
+
+		div.main-right {
+		float: right; /* You can also set this to float: right; */
+		width: 190px;
+		}
+
+		div.item-1 {
+		float: left;
+		width: 370px;
+		margin-top: 19px;
+
+		}
+
+		div.item-1b {
+		float: left;
+		width: 220px;
+		margin-top: 19px;
+
+		}
+		div.item-2 {
+		float: right; /* You can also set this to float: right; */
+		width: 340px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		background-color: #c9d5c1;
+		padding: 15px;
+		font-size: 14;
+		margin-top: 19px;
+		}
+		div.item-2b {
+		float: right; /* You can also set this to float: right; */
+		width: 550px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		background-color: #c9d5c1;
+		padding: 15px;
+		font-size: 14;
+		margin-top: 19px;
+		}
+
+		div.head-out {
+			display:table;
+			position:static;
+			display:inline;
+		}
+
+		div.head-logo {
+			display:table-cell;
+			vertical-align: middle;
+			width: 100%;
+			width:350px;
+			height:100px;
+		}
+
+		div.head-item {
+			display:table-cell;
+			vertical-align: middle;
+			width: 100%;
+			width:75px;
+			height:100px;
+			font-family: 'Cabin', Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			font-color: #000000;
+			text-align: center;
+			display:inline;
+		}
+/*
+		div.header {
+			float: left;
+			width: 800px;
+			height: 100px;
+			   display: table-cell;
+   			vertical-align: bottom;
+
+		}
+
+		div.header-bar {
+			float: right;
+			text-align: right;
+			width: 800px;
+			font-family: 'Cabin', Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			line-height: 14px;
+			color: #000000;
+			vertical-align:middle;
+
+			a:link {color: #000000; text-decoration: underline; },
+			a:active {color: #000000; text-decoration: underline; },
+			a:visited {color: #000000; text-decoration: underline; },
+		}
+
+		div.header-options {
+			float: right;
+			font-family: 'Cabin', Helvetica, Arial, sans-serif;
+			font-size: 10px;						   
+			display: table-cell;
+			color: #000000;
+			vertical-align:50%;
+		}
+
+		
+
+		div.header-right {
+			float: right;
+			text-align: right;
+			width: 150px;
+			height: 50px;
+		}
+
+		*/
+
+		h1 {
+			font-family: 'Arvo', Georgia, Times, serif;
+			font-size: 49px;
+			line-height: 55px;
+			color: #cf4606;
+		}
+
+		h3 {
+			font-family: 'Arvo', Georgia, Times, serif;
+			font-size: 18px;
+			line-height: 24px;
+			color: #d2232a;
+			font-weight: normal;
+
+
+		}
+
+		h4 {
+			font-family: 'Cabin', Georgia, Times, serif;
+			font-size: 25px;
+			line-height: 25px;
+			color: #f8a300;
+		}
+
+		h2 {
+			font-family: 'Cabin', Georgia, Times, serif;
+			font-size: 25px;
+			line-height: 25px;
+			font-weight: normal;
+
+
+		}
+		 
+		p {
+			font-family: 'Cabin', Helvetica, Arial, sans-serif;
+			font-size: 15px;
+			line-height: 25px;
+			color: #464646;
+		}
+
+		a:link {color: #0c4577; text-decoration: none; }
+		a:active {color: #0c4577; text-decoration: none; }
+		a:visited {color: #0c4577; text-decoration: none; }
